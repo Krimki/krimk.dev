@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vasily | Personal Bio</title>
+  <title>Bio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="music.html">My Music List</a></li>
-        <li><a href="socials.html">My Socials</a></li>
-        <li><a href="dice.html">D&D Dice Roller</a></li>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="music.html">🎵 My Music List</a></li>
+        <li><a href="socials.html">🌐 My Socials</a></li>
+        <li><a href="dice.html">🎲 D&D Dice Roller</a></li>
       </ul>
     </nav>
     <header>
@@ -22,110 +22,111 @@
         <div class="header-text">
           <h1>Vasily</h1>
           <h2>aka krimk</h2>
-          <p>Computer Engineering Student | Idiot | Stoner Rock Enjoyer</p>
+          <p>👨‍💻 Computer Engineering Student | Idiot |🎸 Stoner Rock Enjoyer</p>
         </div>
       </div>
       <div class="header-buttons">
-        <a href="music.html" class="btn header-btn">My Music List</a>
-        <a href="socials.html" class="btn header-btn">My Socials</a>
-        <a href="dice.html" class="btn header-btn">D&D Dice Roller</a>
+        <a href="music.html" class="btn">🎵 My Music List</a>
+        <a href="socials.html" class="btn">🌐 My Socials</a>
+        <a href="dice.html" class="btn">🎲 D&D Dice Roller</a>
       </div>
     </header>
     <main>
       <section id="about-me" class="section">
         <h2>About Me</h2>
-        <p>Age: 18</p>
-        <p>Habitat: Cyprus</p>
+        <p>📅 Age: 18</p>
+        <p>📍 Location: Cyprus</p>
       </section>
       <section id="about-website" class="section">
         <h2>About This Website</h2>
-        <p>Why I made it: I was bored and wanted to practice</p>
-        <p>Why it's so shit: I'm still working on it</p>
+        <p>💡 Why I made it: I was bored and wanted to practice.</p>
+        <p>🛠️ Why it's so shit: I'm still working on it.</p>
       </section>
       <section id="skills" class="section">
         <h2>Skills</h2>
-        <ul class="skills">
-          <li class="reveal-box">
-            <button class="btn">JavaScript</button>
-            <div class="reveal-text">wizardry.</div>
-          </li>
-          <li class="reveal-box">
-            <button class="btn">Python</button>
-            <div class="reveal-text">Scripts, bots and stuff.</div>
-          </li>
-          <li class="reveal-box">
-            <button class="btn">HTML & CSS</button>
-            <div class="reveal-text">I can make stuff look okay-ish... maybe.</div>
-          </li>
-          <li class="reveal-box">
-            <button class="btn">Git & GitHub</button>
-            <div class="reveal-text">I commit crimes. Often.</div>
-          </li>
-          <li class="reveal-box">
-            <button class="btn">C++</button>
-            <div class="reveal-text">Bombardiro Crocodilo.</div>
-          </li>
-        </ul>
+        <div class="toggle-card-container">
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>💻 JavaScript</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">wizardry.</div>
+          </div>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>🐍 Python</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">Scripts, bots, and stuff.</div>
+          </div>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>🎨 HTML & CSS</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">I can make stuff look okay-ish... maybe.</div>
+          </div>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>🔧 Git & GitHub</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">I commit crimes. Often.</div>
+          </div>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>⚙️ C++</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">Bombardiro Crocodilo.</div>
+          </div>
+        </div>
       </section>
       <section id="interests" class="section">
         <h2>Interests</h2>
-        <div class="interest-columns">
-          <div class="interest-group">
-            <h3>Stuff I Like</h3>
-            <ul class="interest-list">
-              <li class="reveal-box">
-                <button class="btn">Rust</button>
-                <div class="reveal-text">The game</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn" href="music.html">Rock music</button>
-                <div class="reveal-text">It's cool</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn">Japanese cartoons</button>
-                <div class="reveal-text">The one peace. The one peace is real</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn">Programming</button>
-                <div class="reveal-text">It's fun (sometimes)</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn">when funny</button>
-                <div class="reveal-text">me when funny</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn">minecraft</button>
-                <div class="reveal-text">chicken jockey</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn">Dawgs</button>
-                <div class="reveal-text">ye</div>
-              </li>
-            </ul>
+        <div class="toggle-card-container">
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>🎮 Rust (the game)</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">The game</div>
           </div>
-          <div class="interest-group">
-            <h3>Stuff I Dislike</h3>
-            <ul class="interest-list">
-              <li class="reveal-box">
-                <button class="btn">Rust</button>
-                <div class="reveal-text">Still the game</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn">eminem</button>
-                <div class="reveal-text">idk</div>
-              </li>
-              <li class="reveal-box">
-                <button class="btn">Obama</button>
-                <div class="reveal-text">ебаный ты козел</div>
-              </li>
-            </ul>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>🎸 Rock Music</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">It's cool</div>
+          </div>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>📺 Japanese Cartoons</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">The one piece. The one piece is real.</div>
+          </div>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>💻 Programming</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">It's fun (sometimes).</div>
+          </div>
+          <div class="toggle-card">
+            <div class="toggle-card-header">
+              <span>⛏️ Minecraft</span>
+              <button class="toggle-btn">+</button>
+            </div>
+            <div class="toggle-card-body">Chicken jockey.</div>
           </div>
         </div>
       </section>
     </main>
     <footer>
-      <p>© 2023 Vasily | All Rights Reserved</p>
+      <a href="bombardiro.html" class="btn">Bombardiro crocodilo button</a>
     </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

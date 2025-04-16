@@ -78,20 +78,27 @@ function rollDice(sides) {
     diceContainer.style.height = `${size}px`;
     diceContainer.style.clipPath = clipPath;
 
-    // Add bounce animation class
-    diceContainer.classList.add('dice-bouncing');
+    let counter = 0;
 
-    const finalResult = Math.floor(Math.random() * sides) + 1;
+    const interval = setInterval(() => {
+        const randomValue = Math.floor(Math.random() * sides) + 1;
+        resultElement.textContent = randomValue;
 
-    setTimeout(() => {
-        resultElement.textContent = finalResult;
+        // Add animation class for a bounce effect
+        resultElement.classList.add('bounce');
+        setTimeout(() => resultElement.classList.remove('bounce'), 200);
 
-        const color = getColorBasedOnResult(finalResult, sides);
-        diceContainer.style.backgroundColor = color;
+        counter++;
 
-        // Remove bounce animation class after animation ends
-        diceContainer.classList.remove('dice-bouncing');
-    }, 600); // Match the animation duration
+        if (counter > 10) {
+            clearInterval(interval);
+            const finalResult = Math.floor(Math.random() * sides) + 1;
+            resultElement.textContent = finalResult;
+
+            const color = getColorBasedOnResult(finalResult, sides);
+            diceContainer.style.background = `linear-gradient(135deg, ${color}, #1f6feb)`;
+        }
+    }, 100);
 }
 
 function getColorBasedOnResult(result, sides) {

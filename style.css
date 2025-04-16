@@ -1,14 +1,14 @@
 :root {
-    --bg: #0b0d11;
-    --card-bg: #121417;
-    --border: #1f2328;
+    --bg: #0d1117;
+    --card-bg: #161b22;
+    --border: #30363d;
     --text: #c9d1d9;
     --accent: #58a6ff;
     --muted-text: #8b949e;
-    --shadow: rgba(0, 0, 0, 0.3);
+    --shadow: rgba(0, 0, 0, 0.5);
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --spacing: 1.5rem;
-    --radius: 10px;
+    --radius: 8px;
 }
 
 body {
@@ -26,16 +26,14 @@ body {
 
 .wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: 960px;
     padding: var(--spacing);
     box-sizing: border-box;
     background-color: var(--card-bg);
-    border-left: 10px solid var(--border);
-    border-right: 10px solid var(--border);
-    box-shadow: 0 0 15px var(--shadow);
-    min-height: 100vh;
-    margin: 0 auto;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 10px var(--shadow);
     border-radius: var(--radius);
+    margin: var(--spacing) auto;
 }
 
 header {
@@ -43,7 +41,7 @@ header {
     text-align: center;
     margin-bottom: var(--spacing);
     background-color: var(--card-bg);
-    box-shadow: 0 4px 10px var(--shadow);
+    border-bottom: 1px solid var(--border);
     border-radius: var(--radius);
 }
 
@@ -52,17 +50,16 @@ header {
     align-items: center;
     justify-content: center;
     gap: var(--spacing);
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 .profile-pic {
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: var(--radius);
+    border-radius: 50%;
     border: 2px solid var(--border);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    flex-shrink: 0;
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
 .header-text {
@@ -71,12 +68,12 @@ header {
 
 .header-text h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text);
 }
 
 .header-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0.5rem 0;
     color: var(--accent);
 }
@@ -89,76 +86,67 @@ header {
 
 .header-buttons {
     margin-top: var(--spacing);
-    text-align: center;
     display: flex;
     justify-content: center;
     gap: var(--spacing);
+    flex-wrap: wrap;
 }
 
-h1, h2 {
-    margin: 0;
-    color: var(--text);
-}
-
-h2 {
-    font-size: 1.6rem;
-    margin-top: var(--spacing);
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.5rem;
-}
-
-main {
-    width: 100%;
-    text-align: center;
-}
-
-.section {
-    margin-bottom: var(--spacing);
-    padding: var(--spacing);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background-color: var(--card-bg);
-    box-shadow: 0 4px 8px var(--shadow);
-}
-
-a {
-    color: var(--accent);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #9ecbff;
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: var(--spacing);
-    border-top: 1px solid var(--border);
-    font-size: 0.8rem;
-    color: var(--muted-text);
-}
-
-.btn, .band-btn, .dice-btn, .roll-btn {
+.header-buttons .btn {
     background-color: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 0.8rem 2rem;
-    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     color: var(--text);
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
 }
 
-.btn:hover, .band-btn:hover, .dice-btn:hover, .roll-btn:hover {
+.header-buttons .btn:hover {
     background-color: var(--border);
-    color: var(--accent);
+    color: var(--text);
     transform: scale(1.05);
 }
 
-.skills, .interest-list, .social-links {
+.header-buttons .btn:active {
+    transform: translateY(1px);
+    background-color: #0e1116;
+}
+
+.btn, .band-btn, .dice-btn, .roll-btn {
+    background-color: var(--card-bg); /* Use card background color */
+    border: 1px solid var(--border); /* Subtle border */
+    border-radius: var(--radius);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: var(--text); /* Use text color */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: none; /* Remove shadow */
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn:hover, .band-btn:hover, .dice-btn:hover, .roll-btn:hover {
+    background-color: var(--border); /* Slightly darker background on hover */
+    color: var(--text); /* Keep text color consistent */
+    transform: scale(1.05); /* Slight lift effect */
+}
+
+.btn:active, .band-btn:active, .dice-btn:active, .roll-btn:active {
+    transform: translateY(1px); /* Pressed effect */
+    background-color: #1c2128; /* Slightly darker pressed background */
+}
+
+.skills, .interest-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -167,8 +155,36 @@ footer {
     gap: var(--spacing);
 }
 
-.skills li, .interest-list li {
-    list-style: none;
+.skill-item, .interest-item {
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Frosted glass shadow */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.skill-item:hover, .interest-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2); /* Slightly brighter on hover */
+}
+
+.skill-name, .interest-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.skill-description, .interest-description {
+    font-size: 0.9rem;
+    color: var(--muted-text);
 }
 
 #interests {
@@ -206,23 +222,28 @@ footer {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
 }
 
 .reveal-text {
     max-height: 0;
     overflow: hidden;
     color: var(--muted-text);
-    padding-left: 0.5rem;
-    border-left: 2px solid var(--accent);
-    font-size: 0.85rem;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    font-size: 0.9rem;
     opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
 }
 
-.reveal-box:focus-within .reveal-text {
-    max-height: 200px;
+.reveal-box.active .reveal-text {
     opacity: 1;
-    margin-top: 0.4rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .band-section {
@@ -305,6 +326,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: var(--spacing);
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -335,8 +357,9 @@ nav ul li a:hover {
 .dice-container {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: var(--spacing);
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .dice-btn {
@@ -352,7 +375,7 @@ nav ul li a:hover {
 
 .dice-btn:hover {
     background-color: var(--border);
-    color: var(--accent);
+    color: var(--text);
     transform: scale(1.05);
 }
 
@@ -367,23 +390,35 @@ nav ul li a:hover {
 
 .dice-result-container {
     margin: 3rem auto;
-    background: var(--card-bg);
+    background: linear-gradient(135deg, #1f6feb, #58a6ff); /* Gradient background */
     border: 2px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 15px var(--shadow), inset 0 4px 8px rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius);
+    border-radius: 15px; /* More rounded corners */
     width: 150px;
     height: 150px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Smooth animation */
+}
+
+.dice-result-container:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px #58a6ff; /* Glow effect */
+    background: linear-gradient(135deg, #58a6ff, #1f6feb); /* Reverse gradient on hover */
 }
 
 #dice-result {
-    color: var(--text);
-    font-size: 2rem;
+    color: white; /* White text for better contrast */
+    font-size: 2.5rem; /* Slightly larger font */
     font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
     text-align: center;
+    transition: transform 0.2s ease; /* Smooth scaling effect */
+}
+
+#dice-result.bounce {
+    transform: scale(1.2); /* Slight bounce effect */
 }
 
 .music-page header,
@@ -406,7 +441,7 @@ nav ul li a:hover {
 
 .roll-btn:hover {
     background-color: var(--border);
-    color: var(--accent);
+    color: var(--text);
     transform: scale(1.05);
 }
 
@@ -485,24 +520,300 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes dice-bounce {
-    0% {
-        transform: translateY(0);
+@media (max-width: 768px) {
+    .wrapper {
+        padding: var(--spacing-small);
     }
-    25% {
-        transform: translateY(-20px);
+
+    .header-content {
+        flex-direction: column;
     }
-    50% {
-        transform: translateY(0);
+
+    .interest-columns {
+        flex-direction: column;
     }
-    75% {
-        transform: translateY(-10px);
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
-    100% {
-        transform: translateY(0);
+
+    .dice-container {
+        flex-direction: column;
+    }
+
+    .dice-result-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    #dice-result {
+        font-size: 1.5rem;
     }
 }
 
-.dice-bouncing {
-    animation: dice-bounce 0.6s ease-in-out;
+main {
+    width: 100%;
+    text-align: left;
+}
+
+.section {
+    margin-bottom: var(--spacing);
+    padding: var(--spacing);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing);
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+}
+
+.skills, .interest-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+}
+
+.skills li, .interest-list li {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.8rem;
+    box-shadow: 0 2px 4px var(--shadow);
+    transition: transform 0.2s ease;
+}
+
+.skills li:hover, .interest-list li:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: var(--spacing);
+    border-top: 1px solid var(--border);
+    font-size: 0.9rem;
+    color: var(--muted-text);
+}
+
+.reveal-header {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.reveal-header:hover {
+    background-color: var(--border);
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+.reveal-text {
+    max-height: 0;
+    overflow: hidden;
+    color: var(--muted-text);
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+}
+
+.reveal-box.active .reveal-text {
+    opacity: 1;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing);
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: var(--border);
+}
+
+.card-header {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+}
+
+.card-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.card.active .card-body {
+    max-height: 100px;
+    padding: 1rem;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+.accordion-item {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: var(--card-bg);
+    transition: all 0.3s ease;
+}
+
+.accordion-header {
+    background-color: var(--card-bg);
+    color: var(--text);
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--border);
+    color: var(--accent);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 100px;
+    padding: 1rem;
+}
+
+.toggle-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+}
+
+.toggle-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--card-bg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.toggle-card:hover {
+    transform: scale(1.02); /* Slight zoom effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.toggle-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white; /* Changed text color to white */
+    cursor: pointer;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border); /* Added subtle border */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-card-header:hover {
+    background-color: var(--border); /* Slightly brighter background on hover */
+    color: var(--text); /* Change text color on hover */
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: white; /* Changed button color to white */
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    color: var(--text); /* Retain hover effect */
+}
+
+.toggle-card-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    color: var(--muted-text);
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background for body */
+    border-top: 1px solid var(--border); /* Added border for separation */
+    transition: max-height 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle-card.active .toggle-card-body {
+    max-height: 100px;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly brighter background when expanded */
+}
+
+.toggle-card.active .toggle-btn {
+    transform: rotate(45deg); /* Rotate the + symbol */
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce {
+    animation: bounce 0.3s ease;
 }
