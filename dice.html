@@ -3,36 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>D&D Dice Roller</title>
+  <title>Vasily | D&D Dice Roller</title>
   <link rel="stylesheet" href="style.css" />
   <script src="dice.js" defer></script>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="music.html">My Music List</a></li>
-      <li><a href="socials.html">My Socials</a></li>
-      <li><a href="dice.html">D&D Dice Roller</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section id="dice-roller">
-      <h2>D&D Dice Roller</h2>
-      <div class="dice-container">
-        <button class="dice-btn" id="roll-d20">Roll D20</button>
-        <button class="dice-btn" id="roll-d6">Roll D6</button>
-        <button class="dice-btn" id="roll-d8">Roll D8</button>
-        <button class="dice-btn" id="roll-d12">Roll D12</button>
-        <button class="dice-btn" id="roll-d10">Roll D10</button>
-        <button class="dice-btn" id="roll-d4">Roll D4</button>
-      </div>
-      <div class="result-container">
-        <h3>Result: <span id="dice-result">-</span></h3>
-      </div>
-    </section>
-  </main>
-  
+  <div class="wrapper">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">My Music List</a></li>
+        <li><a href="socials.html">My Socials</a></li>
+        <li><a href="dice.html">D&D Dice Roller</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>D&D Dice Roller</h1>
+    </header>
+    <main>
+      <section id="dice-roller" class="section">
+        <div class="dice-container">
+          <button class="dice-btn" id="roll-d4">D4</button>
+          <button class="dice-btn" id="roll-d6">D6</button>
+          <button class="dice-btn" id="roll-d8">D8</button>
+          <button class="dice-btn" id="roll-d10">D10</button>
+          <button class="dice-btn" id="roll-d12">D12</button>
+          <button class="dice-btn" id="roll-d20">D20</button>
+        </div>
+        <div class="dice-result-container">
+          <div id="dice-result">-</div>
+        </div>
+        <div class="roll-button-container">
+          <button class="roll-btn" id="roll-dice-btn">Roll</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+    </footer>
+  </div>
 </body>
 </html>

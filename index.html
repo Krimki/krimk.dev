@@ -7,85 +7,89 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="wrapper">
     <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="music.html">My Music List</a></li>
-          <li><a href="socials.html">My Socials</a></li>
-          <li><a href="dice.html">D&D Dice Roller</a></li>
-        </ul>
-      </nav>
-  <header>
-    <img src="7743e830d1e3fbab66d3d19216eb1d4f.png" alt="Profile Picture" class="profile-pic" />
-    <h1>Vasily</h1>
-    <h2>aka krimk</h2>
-    <p>Computer Engineering Student | Idiot | Stoner Rock Enjoyer</p>
-    <a href="music.html" class="btn header-btn">My Music List</a>
-    <a href="socials.html" class="btn header-btn">My Socials</a>
-    <a href="dice.html" class="btn header-btn">D&D Dice Roller</a>
-  </header>
-
-  <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Age: 18</p>
-      <p>Habitat: Cyprus</p>
-    </section>
-    <section id="about">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="music.html">My Music List</a></li>
+        <li><a href="socials.html">My Socials</a></li>
+        <li><a href="dice.html">D&D Dice Roller</a></li>
+      </ul>
+    </nav>
+    <header>
+      <div class="header-content">
+        <img src="7743e830d1e3fbab66d3d19216eb1d4f.png" alt="Profile Picture" class="profile-pic" />
+        <div class="header-text">
+          <h1>Vasily</h1>
+          <h2>aka krimk</h2>
+          <p>Computer Engineering Student | Idiot | Stoner Rock Enjoyer</p>
+        </div>
+      </div>
+      <div class="header-buttons">
+        <a href="music.html" class="btn header-btn">My Music List</a>
+        <a href="socials.html" class="btn header-btn">My Socials</a>
+        <a href="dice.html" class="btn header-btn">D&D Dice Roller</a>
+      </div>
+    </header>
+    <main>
+      <section id="about-me" class="section">
+        <h2>About Me</h2>
+        <p>Age: 18</p>
+        <p>Habitat: Cyprus</p>
+      </section>
+      <section id="about-website" class="section">
         <h2>About This Website</h2>
         <p>Why I made it: I was bored and wanted to practice</p>
         <p>Why it's so shit: I'm still working on it</p>
       </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li class="reveal-box">
-          <button class="btn">JavaScript</button>
-          <div class="reveal-text">wizardry.</div>
-        </li>
-        <li class="reveal-box">
-          <button class="btn">Python</button>
-          <div class="reveal-text">Scripts, bots and stuff.</div>
-        </li>
-        <li class="reveal-box">
-          <button class="btn">HTML & CSS</button>
-          <div class="reveal-text">I can make stuff look okay-ish... maybe.</div>
-        </li>
-        <li class="reveal-box">
-          <button class="btn">Git & GitHub</button>
-          <div class="reveal-text">I commit crimes. Often.</div>
-        </li>
-        <li class="reveal-box">
-          <button class="btn">C++</button>
-          <div class="reveal-text">Bombardiro Crocodilo.</div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="interests">
-      <h2>Interests</h2>
-      <div class="interest-columns">
-        <div class="interest-group">
-          <h3>Stuff I Like</h3>
-          <ul class="interest-list">
-            <li class="reveal-box">
-              <button class="btn">Rust</button>
-              <div class="reveal-text">The game</div>
-            </li>
-            <li class="reveal-box">
-              <button class="btn" href="music.html">Rock music</button>
-              <div class="reveal-text">It's cool</div>
-            </li>
-            <li class="reveal-box">
-              <button class="btn">Japanese cartoons</button>
-              <div class="reveal-text">The one peace. The one peace is real</div>
-            </li>
-            <li class="reveal-box">
-              <button class="btn">Programming</button>
-              <div class="reveal-text">It's fun (sometimes)</div>
-            </li>
-            <li class="reveal-box">
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li class="reveal-box">
+            <button class="btn">JavaScript</button>
+            <div class="reveal-text">wizardry.</div>
+          </li>
+          <li class="reveal-box">
+            <button class="btn">Python</button>
+            <div class="reveal-text">Scripts, bots and stuff.</div>
+          </li>
+          <li class="reveal-box">
+            <button class="btn">HTML & CSS</button>
+            <div class="reveal-text">I can make stuff look okay-ish... maybe.</div>
+          </li>
+          <li class="reveal-box">
+            <button class="btn">Git & GitHub</button>
+            <div class="reveal-text">I commit crimes. Often.</div>
+          </li>
+          <li class="reveal-box">
+            <button class="btn">C++</button>
+            <div class="reveal-text">Bombardiro Crocodilo.</div>
+          </li>
+        </ul>
+      </section>
+      <section id="interests" class="section">
+        <h2>Interests</h2>
+        <div class="interest-columns">
+          <div class="interest-group">
+            <h3>Stuff I Like</h3>
+            <ul class="interest-list">
+              <li class="reveal-box">
+                <button class="btn">Rust</button>
+                <div class="reveal-text">The game</div>
+              </li>
+              <li class="reveal-box">
+                <button class="btn" href="music.html">Rock music</button>
+                <div class="reveal-text">It's cool</div>
+              </li>
+              <li class="reveal-box">
+                <button class="btn">Japanese cartoons</button>
+                <div class="reveal-text">The one peace. The one peace is real</div>
+              </li>
+              <li class="reveal-box">
+                <button class="btn">Programming</button>
+                <div class="reveal-text">It's fun (sometimes)</div>
+              </li>
+              <li class="reveal-box">
                 <button class="btn">when funny</button>
                 <div class="reveal-text">me when funny</div>
               </li>
@@ -96,33 +100,32 @@
               <li class="reveal-box">
                 <button class="btn">Dawgs</button>
                 <div class="reveal-text">ye</div>
-                </li>
-          </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="interest-group">
+            <h3>Stuff I Dislike</h3>
+            <ul class="interest-list">
+              <li class="reveal-box">
+                <button class="btn">Rust</button>
+                <div class="reveal-text">Still the game</div>
+              </li>
+              <li class="reveal-box">
+                <button class="btn">eminem</button>
+                <div class="reveal-text">idk</div>
+              </li>
+              <li class="reveal-box">
+                <button class="btn">Obama</button>
+                <div class="reveal-text">ебаный ты козел</div>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="interest-group">
-          <h3>Stuff I Dislike</h3>
-          <ul class="interest-list">
-            <li class="reveal-box">
-              <button class="btn">Rust</button>
-              <div class="reveal-text">Still the game</div>
-            </li>
-            <li class="reveal-box">
-              <button class="btn">eminem</button>
-              <div class="reveal-text">idk</div>
-            </li>
-            <li class="reveal-box">
-              <button class="btn">Obama</button>
-              <div class="reveal-text">ебаный ты козел</div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
-  </main>
-
-  <footer>
-  </footer>
+      </section>
+    </main>
+    <footer>
+      <p>© 2023 Vasily | All Rights Reserved</p>
+    </footer>
+  </div>
 </body>
 </html>
