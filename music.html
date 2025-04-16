@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vasily | My Music List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="music.html">My Music List</a></li>
+          <li><a href="socials.html">My Socials</a></li>
+          <li><a href="dice.html">D&D Dice Roller</a></li>
+        </ul>
+      </nav>
+  <header>
+    <img src="7743e830d1e3fbab66d3d19216eb1d4f.png" alt="Profile Picture" class="profile-pic" />
+    <h1>My Music List</h1>
+    <p>Some of my favorite songs, grouped by band</p>
+  </header>
+
+  <main>
+    <section id="music">
+      <h2>Favorite Songs by Band</h2>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Kyuss</button>
+        <ul class="song-list">
+          <li>Catamaran</li>
+          <li>El Rodeo</li>
+          <li>One Inch Man</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Queens of the Stone Age</button>
+        <ul class="song-list">
+          <li>I sat by the ocean</li>
+          <li>Autopilot</li>
+          <li>Little sister</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Unida</button>
+        <ul class="song-list">
+          <li>If only two</li>
+          <li>Dwarf it</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Truckfighers</button>
+        <ul class="song-list">
+          <li>Mastodont</li>
+          <li>Megalomania</li>
+          <li>Desert cruiser</li>
+          <li>Mind control</li>
+          <li>All of them</li>
+       </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Slo Burn</button>
+        <ul class="song-list">
+          <li>Positiva</li>
+          <li>pilot the dune</li>
+          <li>Snake hips</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Bass drum of death</button>
+        <ul class="song-list">
+          <li>All of them are pretty cool</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Spiderbait</button>
+        <ul class="song-list">
+          <li>Fucken awesome</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Type o negative</button>
+        <ul class="song-list">
+          <li>i dont wanna be me</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Pearl jam</button>
+        <ul class="song-list">
+          <li>Even flow</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">John Garcia</button>
+        <ul class="song-list">
+          <li>Flower</li>
+          <li>Space Vato</li>
+          <li>My mind</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Wolfmother</button>
+        <ul class="song-list">
+          <li>Dimension</li>
+          <li>Joker and the thief</li>
+          <li>Woman</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Turbowolf</button>
+        <ul class="song-list">
+          <li>Good hand</li>
+          <li>Lets die</li>
+          <li>A Rose for the crows</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Witchrider</button>
+        <ul class="song-list">
+          <li>all of them are pretty cool</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Nirvana</button>
+        <ul class="song-list">
+          <li>All of them</li>
+
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Windhand</button>
+        <ul class="song-list">
+          <li>Woodbine</li>
+        </ul>
+      </div>
+
+      <div class="band-section">
+        <button class="btn band-btn" onclick="toggleSongs(this)">Ty Segall</button>
+        <ul class="song-list">
+          <li>My head explodes</li>
+        </ul>
+      </div>
+
+      <!-- тута добавлять песни -->
+    </section>
+  </main>
+
+  <footer>
+  </footer>
+
+  <script>
+    function toggleSongs(button) {
+      const list = button.nextElementSibling;
+      list.style.display = list.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

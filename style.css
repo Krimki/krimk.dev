@@ -1,0 +1,347 @@
+:root {
+    --bg: #0d1117;
+    --text: #c9d1d9;
+    --accent: #58a6ff;
+    --card-bg: #161b22;
+    --border: #30363d;
+    --font: 'Segoe UI', 'Ubuntu', 'Roboto', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.5rem;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: #8b949e;
+  }
+  
+  .profile-pic {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* кнопки смешные */
+  
+  .btn {
+    background-color: #21262d;
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s;
+  }
+  
+  .btn:hover {
+    background-color: #30363d;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    transform: translateY(1px);
+    background-color: #1c2128;
+  }
+  
+  /* скилсы */
+  
+  .skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .skills li {
+    list-style: none;
+  }
+  
+  /* интересы */
+  
+  #interests {
+    margin-top: 3rem;
+  }
+  
+  .interest-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .interest-group {
+    width: 100%;
+  }
+  
+  .interest-group h3 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  
+  .interest-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .interest-columns {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .interest-group {
+      width: 48%;
+    }
+  }
+  
+  
+  .reveal-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .reveal-text {
+    max-height: 0;
+    overflow: hidden;
+    color: #8b949e;
+    padding-left: 0.5rem;
+    border-left: 2px solid var(--accent);
+    font-size: 0.85rem;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .reveal-box:focus-within .reveal-text {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 0.4rem;
+  }
+
+  .band-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .band-btn {
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 2px solid var(--border);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    width: 100%;
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.band-btn:hover {
+    background-color: var(--border);
+    color: var(--accent);
+    transform: scale(1.05);
+}
+
+.band-btn:active {
+    transform: translateY(1px);
+    background-color: #1c2128;
+}
+  
+  .song-list {
+    display: none;
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+
+  .header-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .header-btn:hover {
+    background-color: var(--border);
+    color: var(--accent);
+    transform: scale(1.05);
+  }
+
+  .social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-links li {
+    margin-bottom: 1rem;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .social-links a:hover {
+    background-color: var(--border);
+    color: var(--accent);
+    transform: scale(1.05);
+  }
+
+  /* навигация */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin-bottom: 1rem;
+  }
+  
+  nav ul li a {
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--border);
+    color: var(--accent);
+    transform: scale(1.05);
+  }
+  
+  body {
+    margin-left: 220px; 
+    transition: margin-left 0.3s ease;
+  }
+  
+  /* Тут кубики */
+#dice-roller {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .dice-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .dice-btn {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dice-btn:hover {
+    background-color: var(--border);
+    color: var(--accent);
+    transform: scale(1.05);
+  }
+  
+  .result-container {
+    margin-top: 2rem;
+  }
+  
+  #dice-result {
+    font-size: 2rem;
+    color: var(--accent);
+    font-weight: bold;
+  }
+  
