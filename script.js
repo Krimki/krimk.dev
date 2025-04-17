@@ -98,4 +98,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('.skill-item, .interest-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const description = item.querySelector('p');
+        if (description) {
+            const isVisible = description.style.display === 'block';
+            description.style.display = isVisible ? 'none' : 'block';
+        }
+    });
+  });
+});
+
 
