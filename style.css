@@ -545,6 +545,7 @@ nav ul li a:hover {
         background-color: transparent;
         border: none;
         box-shadow: none;
+        display: block; /* Ensure the nav bar remains visible */
     }
 
     nav ul {
@@ -558,12 +559,12 @@ nav ul li a:hover {
     }
 
     nav ul li a {
-        display: none;
+        display: none; /* Hide the text links */
     }
 
     nav ul li a::before {
         content: attr(data-icon);
-        display: block;
+        display: block; /* Display only the Unicode character */
         font-size: 1.5rem;
         text-align: center;
     }
