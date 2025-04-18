@@ -569,6 +569,11 @@ nav ul li a:hover {
         margin-left: 70px; /* Adjust margin for smaller screens */
         padding: 0.5rem;
     }
+
+    .project-card {
+        width: 90%; /* Reduce width for better fit on mobile */
+        margin: 10px auto; /* Center cards with spacing */
+    }
 }
 
 main {
