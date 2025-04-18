@@ -553,6 +553,17 @@ nav ul li a:hover {
     #dice-result {
         font-size: 1.5rem;
     }
+
+    nav ul li a {
+        display: none;
+    }
+
+    nav ul li a::before {
+        content: attr(data-icon);
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
 
 main {
