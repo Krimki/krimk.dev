@@ -536,37 +536,9 @@ nav ul li a:hover {
         flex-direction: column;
     }
 
-    nav {
-        position: fixed;
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 0;
-        background-color: transparent;
-        border: none;
-        box-shadow: none;
-        display: block; /* Ensure the nav bar remains visible */
-    }
-
     nav ul {
         flex-direction: column;
         align-items: center;
-        gap: 0;
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-
-    nav ul li a {
-        display: none; /* Hide the text links */
-    }
-
-    nav ul li a::before {
-        content: attr(data-icon);
-        display: block; /* Display only the Unicode character */
-        font-size: 1.5rem;
-        text-align: center;
     }
 
     .dice-container {
@@ -582,15 +554,20 @@ nav ul li a:hover {
         font-size: 1.5rem;
     }
 
-    nav ul li a {
-        display: none;
+    .project-card {
+        width: 100%; /* Make cards take full width on smaller screens */
+        height: auto; /* Adjust height to fit content */
+        margin: 10px 0; /* Add spacing between cards */
     }
 
-    nav ul li a::before {
-        content: attr(data-icon);
-        display: block;
-        font-size: 1.5rem;
-        text-align: center;
+    .project-image img {
+        width: 50px; /* Adjust image size for smaller screens */
+        height: 50px;
+    }
+
+    .project-details {
+        margin-left: 70px; /* Adjust margin for smaller screens */
+        padding: 0.5rem;
     }
 }
 
