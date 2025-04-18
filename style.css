@@ -926,3 +926,86 @@ audio {
 .btn:visited, .band-btn:visited, .dice-btn:visited, .roll-btn:visited, .header-btn:visited, .social-links a:visited {
   color: var(--text); 
 }
+
+#player-score, #dealer-score {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    text-align: center;
+    color: var(--accent);
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#controls button {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#controls button:hover {
+    background-color: #374151;
+    transform: scale(1.05);
+}
+
+#controls button:active {
+    background-color: #111827;
+    transform: scale(0.95);
+}
+
+#controls button:disabled {
+    background-color: #374151;
+    color: #6b7280;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.result-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--text);
+}
+
+#result {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #ff4d4d; /* Red for lose */
+    text-shadow: 0 0 10px rgba(255, 77, 77, 0.8);
+    animation: pulse 1s infinite;
+}
+
+#result.win {
+    color: #4caf50; /* Green for win */
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}

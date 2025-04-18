@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack minigame</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="socials.html">🌐 My Socials</a></li>
+        <li><a href="projects.html">📂 Projects</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Blackjack minigame</h1>
+    </header>
+    <main>
+      <div id="game">
+        <div id="dealer">
+          <h2>Dealer</h2>
+          <div id="dealer-cards" class="card-container"></div>
+          <p id="dealer-score">Score: 0</p>
+        </div>
+        <p id="result"></p>
+        <div id="player">
+          <h2>Player</h2>
+          <div id="player-cards" class="card-container"></div>
+          <p id="player-score">Score: 0</p>
+        </div>
+        <div id="controls">
+          <button id="hit">Hit</button>
+          <button id="stand">Stand</button>
+          <button id="restart">Restart</button>
+        </div>
+      </div>
+      <div id="rules-container" class="section">
+        <button id="rules-button" class="btn">Rules</button>
+        <div id="rules-text" style="display: none;">
+          <h3>Blackjack Rules</h3>
+          <ul>
+            <li>get as close to 21 as possible without exceeding it.</li>
+            <li>Number cards are worth their face value.</li>
+            <li>Face cards (Jack, Queen, King) are worth 10 points.</li>
+            <li>Aces are worth 1 or 11 points, whichever is more favorable.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+    </footer>
+  </div>
+  <script src="blackjack.js"></script>
+  <script>
+    document.getElementById('rules-button').addEventListener('click', () => {
+      const rulesText = document.getElementById('rules-text');
+      if (rulesText.style.display === 'none') {
+        rulesText.style.display = 'block';
+      } else {
+        rulesText.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
