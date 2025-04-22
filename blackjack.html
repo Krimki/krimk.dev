@@ -63,6 +63,13 @@
         rulesText.style.display = 'none';
       }
     });
+
+    function createCardElement(card) {
+      const cardElement = document.createElement('img');
+      cardElement.src = `/sprites/${card.suit} ${card.value}.png`;
+      cardElement.classList.add('card');
+      return cardElement;
+    }
   </script>
 </body>
 </html>

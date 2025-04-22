@@ -1012,13 +1012,13 @@ audio {
     font-weight: bold;
     text-align: center;
     margin-top: 1.5rem;
-    color: #ff4d4d; /* Red for lose */
+    color: #ff4d4d; 
     text-shadow: 0 0 10px rgba(255, 77, 77, 0.8);
     animation: pulse 1s infinite;
 }
 
 #result.win {
-    color: #4caf50; /* Green for win */
+    color: #4caf50; 
     text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
 }
 
